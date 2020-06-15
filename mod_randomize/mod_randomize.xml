@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" method="upgrade">
+    <name>Randomize!</name>
+    <author>Nicholas K. Dionysopoulos</author>
+    <creationDate>March 2010</creationDate>
+    <copyright>Copyright (c)2010 Nicholas K. Dionysopoulos. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl.html GNU/GPL v3 or later</license>
+    <authorEmail>nicholas@dionysopoulos.me</authorEmail>
+    <authorUrl>www.dionysopoulos.me</authorUrl>
+    <version>1.0</version>
+    <description>
+        <![CDATA[Randomize! is a simple	Joomla! module which allows you to display
+		a single, random module out of all modules published in a specific module
+		position. This can be used to randomly rotate between advertisement networks,
+		swap between a quote of the day, image of the day, etc. It works best if it
+		isn't cached, of course!]]>
+    </description>
+    <files>
+        <filename module="mod_randomize">mod_randomize.php</filename>
+    </files>
+    <params>
+		<param name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		<param name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+        <param name="position" type="text"
+			label="Position"
+			description="The module position to load"
+			default="left"/>
+        <param name="style" type="text"
+			label="Rendering style"
+			description="The module rendering style. If unsure, use xhtml. Or, use one rendering style known to your template, e.g. jarounded for the JA Purity template."
+			default="xhtml"/>
+    </params>
+</install>
